@@ -56,12 +56,7 @@ public class MenuTabActivity extends TabActivity {
 		friendspec.setContent(friendsIntent);
 		
 
-		// Tab for Group
-		TabSpec groupspec = tabHost.newTabSpec("Groups");
-		groupspec.setIndicator("",
-				getResources().getDrawable(R.drawable.icon_groups_tab));
-		Intent groupsIntent = new Intent(this, GroupsActivity.class);
-		groupspec.setContent(groupsIntent);
+
 
 		// Tab for Chat
 		TabSpec chatspec = tabHost.newTabSpec("Chats");
@@ -70,18 +65,13 @@ public class MenuTabActivity extends TabActivity {
 		Intent chatsIntent = new Intent(this, ChatsActivity.class);
 		chatspec.setContent(chatsIntent);
 
-		// Tab for Praktikum
-		TabSpec prakspec = tabHost.newTabSpec("Praktikum");
-		prakspec.setIndicator("",
-				getResources().getDrawable(R.drawable.icon_praktikum_tab));
-		Intent prakIntent = new Intent(this, PraktikumActivity.class);
-		prakspec.setContent(prakIntent);
+
 
 		// Adding all TabSpec to TabHost
 		tabHost.addTab(friendspec); // Adding friends tab
-		tabHost.addTab(groupspec); // Adding groups tab
+
 		tabHost.addTab(chatspec); // Adding chats tab
-		tabHost.addTab(prakspec); // Adding praktikum tab
+
 		
 				
 		
