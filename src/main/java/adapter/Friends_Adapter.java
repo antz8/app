@@ -62,7 +62,7 @@ public class Friends_Adapter extends BaseAdapter {
 	        friends_nim = (TextView)v.findViewById(R.id.friends_nim);
 	       
 	        friends_name.setText(arrList.get(position).get("name"));
-	        friends_nim.setText(arrList.get(position).get("nim"));
+	        friends_nim.setText(arrList.get(position).get("idd"));
 
 	        return v;
 	}

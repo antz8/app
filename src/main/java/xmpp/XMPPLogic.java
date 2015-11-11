@@ -6,11 +6,11 @@ public class XMPPLogic {
 
 	private XMPPConnection connection = null;
 	
-	String host = "192.168.141.1";	
+	String host = "192.168.173.1";
     String port = "5222";
     String service = "ptalk";
     
-    String cekNim="0";
+    String cekIdd="0";
     int a=0;
     String id = "0";
 	  private static XMPPLogic instance = null;
@@ -54,12 +54,12 @@ public class XMPPLogic {
 		this.service = service;
 	}
 
-	public String getCekNim() {
-		return cekNim;
+	public String getCekIdd() {
+		return cekIdd;
 	}
 
-	public void setCekNim(String cekNim) {
-		this.cekNim = cekNim;
+	public void setCekIdd(String cekIdd) {
+		this.cekIdd = cekIdd;
 	}
 
 	public int getA() {

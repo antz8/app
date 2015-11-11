@@ -41,7 +41,7 @@
             android:textSize="15sp" />
 
         <TextView
-            android:id="@+id/chats_actionNim"
+            android:id="@+id/chats_actionIdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"

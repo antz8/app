@@ -51,47 +51,23 @@ public class AlarmReceiver extends BroadcastReceiver {
     
 	}
 	
-//		public void createNotification(Context context,String msg,String txtMessage,String alert,String name,String nim){
-//		 
-//		 Intent i = new Intent(context,Chats_Action.class);
-//		 i.putExtra("name", name);
-//		 i.putExtra("nim", nim);
-//		 
-//		 PendingIntent pendingIntent =  PendingIntent.getActivity(context, 0, i, 0);	
-//		 
-//		 NotificationCompat.Builder mBuilder =
-//				    new NotificationCompat.Builder(context)
-//				    .setSmallIcon(R.drawable.icon)
-//				    .setContentTitle(msg)
-//				    .setContentText(txtMessage)
-//				    .setContentIntent(pendingIntent);
-//		 
-//		 mBuilder.setDefaults(NotificationCompat.DEFAULT_SOUND);
-//		 mBuilder.setAutoCancel(true);
-//		 
-//		 NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
-//		 
-//		 notificationManager.notify(1,mBuilder.build());
-//		 
-//		
-//         		
-//		 
-//	 }
+
 	 
 	public static void createNotification(Context context, String msg,
-			String txtMessage, String alert, String name, String nim) {
+			String txtMessage, String alert, String name, String idd
+	) {
 			Intent i = new Intent(context , Chats_Action.class);
 			i.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
 			i.putExtra("name", name);
-			i.putExtra("nim", nim);
-			i.putExtra("recipient", nim);
+			i.putExtra("idd", idd);
+			i.putExtra("recipient", idd);
 			i.putExtra("message", txtMessage);
 
 			PendingIntent pendingIntent = PendingIntent.getActivity(context,
 					-1, i,
 					PendingIntent.FLAG_UPDATE_CURRENT);
 
-			NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(
+			Builder mBuilder = new Builder(
 					context).setSmallIcon(R.drawable.icon)
 					.setContentTitle("PTALK").setContentText(txtMessage)
 					.setContentIntent(pendingIntent);

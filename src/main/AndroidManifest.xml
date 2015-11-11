@@ -44,7 +44,6 @@
             android:theme="@style/CustomActionBarTheme"
             ></activity>
         <activity android:name="activity.FriendsActivity" ></activity>
-        <activity android:name="activity.GroupsActivity" ></activity>
         <activity android:name="activity.ChatsActivity" ></activity>
 
         <activity android:name="action.Chats_Action"

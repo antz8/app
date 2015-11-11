@@ -48,16 +48,7 @@ public class ChatsActivity extends Activity {
 
 	DBAdapter db;
 
-	String nim[] = { "6301122194", "6301122195", "6301122196", "6301122197",
-			"6301122198", "6301122199", "6301122191", "6301122192",
-			"6301122193", "6301122190" };
 
-	String nama[] = { "Mike Lewis", "L Messi", "Chelsea Islan", "Maudi Ayunda",
-			"Sule", "Andre", "Zaskia Sungkar", "Tias Mirasih", "Mario T",
-			"Bebi Romeo" };
-
-	String chat[] = { "Hahaha", "Yoi Bro", "Iyaa", "Dikostan nih", "Ntar aja",
-			"Oke", "Dimana?", "Sipppp", "Supeerrr", "Jam 9 aja" };
 
 	Dialog popup;
 	Button ya, tidak;
@@ -121,7 +112,7 @@ public class ChatsActivity extends Activity {
 				hash = new HashMap<String, String>();
 				hash.put("name", c.getString(c.getColumnIndex("recipient"))
 						.toString());
-				hash.put("nim",getChatakhir(c.getString(c.getColumnIndex("recipient"))));
+				hash.put("idd",getChatakhir(c.getString(c.getColumnIndex("recipient"))));
 				array.add(hash);
 				Log.i("Jumlah ",
 						"User "
@@ -250,25 +241,5 @@ public class ChatsActivity extends Activity {
 		myTabs.setTitle("History Chats");
 	}
 	
-//	@Override
-//	  public boolean onCreateOptionsMenu(Menu menu) {
-//	    MenuInflater inflater = getMenuInflater();
-//	    inflater.inflate(R.menu.menu, menu);
-//	    return true;
-//	  }
-//
-//	@Override
-//	public boolean onOptionsItemSelected(MenuItem item) {
-//		switch (item.getItemId()) {
-//		case android.R.id.home:
-//			Intent intent = new Intent(this, MenuTabActivity.class);
-//			intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//			startActivity(intent);
-//			return true;
-//		case R.id.logout:
-//			
-//		default:
-//			return super.onOptionsItemSelected(item);
-//		}
-//	}
+
 }

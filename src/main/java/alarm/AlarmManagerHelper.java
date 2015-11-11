@@ -3,7 +3,6 @@ package alarm;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.List;
 
 import org.jivesoftware.smack.XMPPConnection;
 import org.json.JSONException;
@@ -40,7 +39,7 @@ public class AlarmManagerHelper extends BroadcastReceiver {
 
 	Context ctx;
 
-	public String nim = "a";
+	public String idd = "a";
 
 	//String idcek = "0";
 	String id = "0";
@@ -70,7 +69,7 @@ public class AlarmManagerHelper extends BroadcastReceiver {
 
 		if (conn != null) {
 
-			nim = conn.getUser().replace("@ptalk/Smack", "").toString();
+			idd = conn.getUser().replace("@ptalk/Smack", "").toString();
 
 		}
 
@@ -81,7 +80,7 @@ public class AlarmManagerHelper extends BroadcastReceiver {
 				+ ":00";
 
 		String url = "http://" + XMPPLogic.getInstance().getHost()
-				+ ":8112/ptalk/reminder/reminder&" + nim + "&"
+				+ ":8112/ptalk/reminder/reminder&" + idd + "&"
 				+ tanggal.substring(0, 10) + "&" + tanggal.substring(11, 16)
 				+ ":00";
 

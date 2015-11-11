@@ -1,13 +1,9 @@
 package action;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
 
 import java.util.HashMap;
 
-import org.jivesoftware.smack.ConnectionConfiguration;
 import org.jivesoftware.smack.PacketListener;
 
 import org.jivesoftware.smack.XMPPConnection;
@@ -16,14 +12,9 @@ import org.jivesoftware.smack.filter.MessageTypeFilter;
 import org.jivesoftware.smack.filter.PacketFilter;
 import org.jivesoftware.smack.packet.Message;
 import org.jivesoftware.smack.packet.Packet;
-import org.jivesoftware.smack.packet.Presence;
 
 import org.jivesoftware.smackx.Form;
-import org.jivesoftware.smackx.FormField;
-import org.jivesoftware.smackx.ServiceDiscoveryManager;
-import org.jivesoftware.smackx.muc.HostedRoom;
 import org.jivesoftware.smackx.muc.MultiUserChat;
-import org.jivesoftware.smackx.packet.DataForm;
 import org.json.JSONException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -37,34 +28,29 @@ import com.androidquery.AQuery;
 import com.androidquery.callback.AjaxStatus;
 import com.example.p_talk.R;
 
-import activity.MenuTabActivity;
 import adapter.Anggota_Adapter;
 import adapter.Chats_Action_Adapter;
-import adapter.Groups_Adapter;
+
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.UserManager;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.View.OnClickListener;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class Chats_Group_Action extends Activity {
 
-	String nama, nim;
-	TextView txtnama, txtnim;
+
+	TextView txtnama, txtidd;
 	EditText send_text;
 	ImageButton send;
 
@@ -111,7 +97,7 @@ public class Chats_Group_Action extends Activity {
 		
 		aq = new AQuery(this);
 		txtnama = (TextView) findViewById(R.id.chats_actionName);
-		txtnim = (TextView) findViewById(R.id.chats_actionNim);
+		txtidd = (TextView) findViewById(R.id.chats_actionNim);
 		send = (ImageButton) findViewById(R.id.chats_Action_Send);
 		send_text = (EditText) findViewById(R.id.chat_action_formmessage);
 
@@ -145,7 +131,7 @@ public class Chats_Group_Action extends Activity {
 				// TODO Auto-generated method stub
 
 				String text = send_text.getText().toString();
-				String to = txtnim.getText().toString();
+				String to = txtidd.getText().toString();
 
 				Log.i("XMPPClient", "Sending text [" + text + "] to [" + to
 						+ "]");
@@ -369,7 +355,7 @@ public class Chats_Group_Action extends Activity {
 
 				if (jum != null) {
 //					formPopupKonfirm(name, username);
-					txtnim.setText(jum);
+					txtidd.setText(jum);
 				}
 
 			} else {
@@ -404,7 +390,7 @@ public class Chats_Group_Action extends Activity {
 
 						}
 						if (childitem.nodeName().equals("jid")) {
-							hash.put("nim", childitem.text().replace("@ptalk",""));
+							hash.put("idd", childitem.text().replace("@ptalk",""));
 
 						}
 					}

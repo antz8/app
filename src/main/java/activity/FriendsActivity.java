@@ -11,43 +11,34 @@ import org.jivesoftware.smack.RosterListener;
 import org.jivesoftware.smack.XMPPConnection;
 import org.jivesoftware.smack.XMPPException;
 import org.jivesoftware.smack.packet.Presence;
-import org.w3c.dom.ls.LSInput;
 
 import service.BackgroundService;
 
-import xmpp.Connect;
 import xmpp.XMPPLogic;
 
-import com.androidquery.AQuery;
 import com.example.p_talk.R;
 
 import action.Chats_Action;
 import action.Friends_Invitation;
 import action.Profile;
 import adapter.Friends_Adapter;
-import android.app.ActionBar;
+
 import android.app.Activity;
 import android.app.Dialog;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemLongClickListener;
-import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -57,7 +48,7 @@ public class FriendsActivity extends Activity {
 	ListView lv;
 	ArrayList<HashMap<String, String>> array = new ArrayList<HashMap<String, String>>();
 
-	String nama_action, nim_action;
+	String nama_action, idd_action;
 	
 
 	private XMPPConnection connection;
@@ -134,14 +125,14 @@ public class FriendsActivity extends Activity {
 					int position, long id) {
 				// TODO Auto-generated method stub
 				nama_action = array.get(position).get("name");
-				nim_action = array.get(position).get("nim");
+				idd_action = array.get(position).get("idd");
 				
 				finish();
 				Intent i = getIntent();//new Intent(getApplicationContext(), Chats_Action.class);
 //				i.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
 				i.setClass(getApplicationContext(), Chats_Action.class);
 				i.putExtra("name", nama_action);
-				i.putExtra("nim", nim_action);
+				i.putExtra("idd", idd_action);
 				startActivity(i);
 			}
 
@@ -153,7 +144,7 @@ public class FriendsActivity extends Activity {
 			public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
 					int arg2, long arg3) {
 				// TODO Auto-generated method stub
-				String u = array.get(arg2).get("nim");
+				String u = array.get(arg2).get("idd");
 				formPopup(u.replace("@ptalk", ""));
 				return false;
 			}
@@ -223,7 +214,7 @@ public class FriendsActivity extends Activity {
 			hash = new HashMap<String, String>();
 			if (entry.getName() != null){
 			hash.put("name", entry.getName());
-			hash.put("nim", entry.getUser());
+			hash.put("idd", entry.getUser());
 			array.add(hash);
 			}else{
 				j=j+1;

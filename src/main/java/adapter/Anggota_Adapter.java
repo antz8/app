@@ -10,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Anggota_Adapter extends BaseAdapter {
@@ -20,7 +19,7 @@ public class Anggota_Adapter extends BaseAdapter {
     Context context;
     LayoutInflater inflater;
     
-    TextView name_anggota,nim_anggota;
+    TextView name_anggota, idd_anggota;
     
     
     public Anggota_Adapter(Context ctx ,  ArrayList<HashMap<String, String>> arr) {
@@ -59,10 +58,10 @@ public class Anggota_Adapter extends BaseAdapter {
 	        }
 	        
 	       name_anggota = (TextView)v.findViewById(R.id.anggota_nama);
-	       nim_anggota = (TextView)v.findViewById(R.id.anggota_nim);
+	       idd_anggota = (TextView)v.findViewById(R.id.anggota_idd);
 	       
 	        name_anggota.setText(arrList.get(position).get("name"));
-	        nim_anggota.setText(arrList.get(position).get("nim"));
+	        idd_anggota.setText(arrList.get(position).get("idd"));
 
 	        return v;
 	}

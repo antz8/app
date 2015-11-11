@@ -50,7 +50,7 @@
             android:background="@drawable/back_textfield"
             android:ems="10"
             android:gravity="center"
-            android:hint="NIM OR NIP"
+            android:hint="Username"
             android:textAlignment="center" >
 
             <requestFocus />

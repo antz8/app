@@ -1,23 +1,15 @@
 package action;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
 
-import org.jivesoftware.smack.ConnectionConfiguration;
-import org.jivesoftware.smack.ConnectionListener;
 import org.jivesoftware.smack.PacketListener;
-import org.jivesoftware.smack.Roster;
-import org.jivesoftware.smack.RosterListener;
 import org.jivesoftware.smack.XMPPConnection;
-import org.jivesoftware.smack.XMPPException;
 import org.jivesoftware.smack.filter.MessageTypeFilter;
 import org.jivesoftware.smack.filter.PacketFilter;
 import org.jivesoftware.smack.packet.Message;
 import org.jivesoftware.smack.packet.Packet;
-import org.jivesoftware.smack.packet.Presence;
 import org.jivesoftware.smack.util.StringUtils;
 
 import xmpp.Connect;
@@ -29,32 +21,26 @@ import database.DBAdapter;
 
 import activity.MenuTabActivity;
 import adapter.Chats_Action_Adapter;
-import adapter.Friends_Adapter;
+
 import android.app.Activity;
-import android.app.Notification;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class Chats_Action extends Activity {
 
-	String nama, nim;
-	TextView txtnama, txtnim;
+	String nama, idd;
+	TextView txtnama, txtidd;
 	EditText send_text;
 	ImageButton send;
 
@@ -97,7 +83,7 @@ public class Chats_Action extends Activity {
 
 		// array = new ArrayList<HashMap<String, String>>();
 		txtnama = (TextView) findViewById(R.id.chats_actionName);
-		txtnim = (TextView) findViewById(R.id.chats_actionNim);
+		txtidd = (TextView) findViewById(R.id.chats_actionNim);
 		send = (ImageButton) findViewById(R.id.chats_Action_Send);
 		send_text = (EditText) findViewById(R.id.chat_action_formmessage);
 
@@ -122,7 +108,7 @@ public class Chats_Action extends Activity {
 				Connect c = new Connect();
 
 				String text = send_text.getText().toString();
-				String to = txtnim.getText().toString();
+				String to = txtidd.getText().toString();
 				Log.i("XMPPClient", "Sending text [" + text + "] to [" + to
 						+ "]");
 				Message msg = new Message(to, Message.Type.chat);
@@ -146,9 +132,9 @@ public class Chats_Action extends Activity {
 				Log.i("nama", "ini nama " + nama);
 
 			}
-			if (extra.getString("nim") != null) {
-				nim = extra.getString("nim");
-				Log.i("nim", "ini nim" + nim);
+			if (extra.getString("idd") != null) {
+				idd = extra.getString("idd");
+				Log.i("idd", "ini idd" + idd);
 
 			}
 			if (extra.getString("recipient") != null) {
@@ -221,21 +207,21 @@ public class Chats_Action extends Activity {
 		if (recipient_notif != null) {
 			rec = recipient_notif;
 			txtnama.setText(nama);
-			txtnim.setText(nim);
-			setCekNim(txtnim.getText().toString());
+			txtidd.setText(idd);
+			setCekNim(txtidd.getText().toString());
 			recipient_notif = null;
 
-		} else if (nim != null) {
-			rec = nim;
+		} else if (idd != null) {
+			rec = idd;
 			txtnama.setText(nama);
-			txtnim.setText(nim);
-			setCekNim(txtnim.getText().toString());
+			txtidd.setText(idd);
+			setCekNim(txtidd.getText().toString());
 
 		} else {
 			rec = recipient_history;
 			txtnama.setText(nama);
-			txtnim.setText(recipient_history);
-			setCekNim(txtnim.getText().toString());
+			txtidd.setText(recipient_history);
+			setCekNim(txtidd.getText().toString());
 		}
 		db.open();
 

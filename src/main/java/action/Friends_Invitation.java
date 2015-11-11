@@ -42,7 +42,7 @@ public class Friends_Invitation extends Activity {
 	ArrayList<HashMap<String, String>> array = new ArrayList<HashMap<String, String>>();;
 	HashMap<String, String> hash;
 
-	String nama_action, nim_action;
+
 
 	int row;
 
@@ -76,7 +76,7 @@ public class Friends_Invitation extends Activity {
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
 					long arg3) {
 
-				username = array.get(arg2).get("nim");
+				username = array.get(arg2).get("idd");
 				asyncNamaUser(username);
 
 			}
@@ -94,7 +94,7 @@ public class Friends_Invitation extends Activity {
 			hash = new HashMap<String, String>();
 			if (entry.getName() == null) {
 				hash.put("name", "New Friend");
-				hash.put("nim", entry.getUser());
+				hash.put("idd", entry.getUser());
 				array.add(hash);
 			}
 			// hash.put("name", entry.getName());

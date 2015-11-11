@@ -18,7 +18,7 @@ public class Chats_Adapter extends BaseAdapter {
     Context context;
     LayoutInflater inflater;
     
-    TextView chats_name,chats_nim,chats_message;
+    TextView chats_name, chats_idd,chats_message;
     
     public Chats_Adapter(Context ctx ,  ArrayList<HashMap<String, String>> arr) {
 		// TODO Auto-generated constructor stub
@@ -54,11 +54,11 @@ public class Chats_Adapter extends BaseAdapter {
 	        }
 	        
 	        chats_name = (TextView)v.findViewById(R.id.chats_name);
-	        chats_nim = (TextView)v.findViewById(R.id.chats_nim);
+	        chats_idd = (TextView)v.findViewById(R.id.chats_idd);
 	        chats_message = (TextView)v.findViewById(R.id.chats_last_chat);
 	      
 	        chats_name.setText(arrList.get(position).get("name"));
-	        chats_nim.setText(arrList.get(position).get("nim"));
+	        chats_idd.setText(arrList.get(position).get("idd"));
 	        chats_message.setText(arrList.get(position).get("message"));
 	        return v;	
 	        }
