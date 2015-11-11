@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3091d6"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/profile" />
+
+    </TableRow>
+
+    <TextView
+        android:id="@+id/anggota_nama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Change Your Password" />
+
+    <EditText
+        android:id="@+id/newPasswor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/back_textfield"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="New Password"
+        android:inputType="textPassword"
+        android:textAlignment="center" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/reNewPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/back_textfield"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Re-Password"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btnChangepassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/btn_back200"
+        android:text="Change" />
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/but_backred200"
+            android:text="Logout" />
+
+    </TableRow>
+
+</LinearLayout>
+<!-- From: file:/D:/aSDK/StudioProjects/Project/app/src/main/res/layout/profile.xml -->

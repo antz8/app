@@ -1,0 +1,29 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "com.example.p_talk"
+        minSdkVersion 8
+        targetSdkVersion 8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:19.1.0'
+    compile files('libs/achartengine-1.1.0.jar')
+    compile files('libs/android-query-full.0.26.8.jar')
+    compile files('libs/jsoup-1.8.1.jar')
+    compile files('libs/jxl.jar')
+    compile files('libs/poi-3.7-20101029.jar')
+    compile files('libs/smack.jar')
+}

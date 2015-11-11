@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+     <item android:drawable="@drawable/g_default"
+          android:state_selected="true" />
+    
+    <!-- When not selected, use default-->
+    <item android:drawable="@drawable/g_default" />
+
+</selector>
+<!-- From: file:/D:/aSDK/StudioProjects/Project/app/src/main/res/drawable-hdpi/icon_groups_tab.xml -->

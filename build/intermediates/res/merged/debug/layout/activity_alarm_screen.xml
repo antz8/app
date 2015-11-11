@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#3091d6"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/alarm_screen_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Alarm!"
+        android:textColor="#ffffff"
+        android:textSize="38dp" />
+
+    <TextView
+        android:id="@+id/alarm_screen_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="00 : 00"
+        android:textColor="#ffffff"
+        android:textSize="52dp" />
+
+    <TextView
+        android:id="@+id/alarm_screen_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:text="Alarm name"
+        android:textAlignment="center"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/alarm_screen_button"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/but_backred200"
+        android:text="Dismiss"
+        android:textSize="38dp" />
+
+</LinearLayout>
+<!-- From: file:/D:/aSDK/StudioProjects/Project/app/src/main/res/layout/activity_alarm_screen.xml -->

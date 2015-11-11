@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3091d6"
+    android:orientation="vertical" >
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/login_erorr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff0000"
+            android:visibility="invisible" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center" >
+
+        <EditText
+            android:id="@+id/login_Username"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:background="@drawable/back_textfield"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="NIM OR NIP"
+            android:textAlignment="center" >
+
+            <requestFocus />
+        </EditText>
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:gravity="center" >
+
+        <EditText
+            android:id="@+id/login_NoTelepon"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:background="@drawable/back_textfield"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="PASSWORD"
+            android:inputType="textPassword"
+            android:textAlignment="center" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/login_btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_back200"
+            android:text="Login"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:layout_weight="1"
+        android:background="#074083"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/tes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NURUL AKBAR"
+            android:textColor="#ffffff" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#074083"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/profil_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2015"
+            android:textColor="#ffffff" />
+
+    </TableRow>
+
+</LinearLayout>

@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">P-TALK</string>
+    <string name="app_name2">CHATS</string>
+    <string-array name="StatusAbsen">
+        <item >Alfa</item>
+        <item >Hadir</item>
+        <item >Izin</item>
+    </string-array>
+
+</resources>

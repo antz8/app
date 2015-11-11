@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3091d6"
+    android:orientation="vertical" >
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/tes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VERIFICATION"
+            android:textColor="#ffffff"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center" >
+
+        <EditText
+            android:id="@+id/verifikasi_Code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/back_textfield"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="VERIFICATION CODE"
+            android:textAlignment="center" >
+
+            <requestFocus />
+        </EditText>
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:gravity="center" >
+
+        <ImageButton
+            android:id="@+id/verifikasi_BtnVerifikasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/verikasi"
+            android:onClick="onClick_Verifikasi"
+            android:src="@drawable/verikasi" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="255dp"
+        android:background="#074083"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/friends_nim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="p-talk"
+            android:textColor="#ffffff" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#074083"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/profil_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2015"
+            android:textColor="#ffffff" />
+    </TableRow>
+
+</LinearLayout><!-- From: file:/D:/aSDK/StudioProjects/Project/app/src/main/res/layout/verifikasi.xml -->

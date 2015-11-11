@@ -1,0 +1,93 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.p_talk"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk 
+         android:minSdkVersion="8"
+        />
+        
+     <uses-permission android:name="android.permission.INTERNET" /> 
+     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+     
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+   <!--  <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" /> --> 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+   
+     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+     
+ 
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        >
+        <activity android:name="main.Main"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"   
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="main.Login" android:label="Login"
+            android:theme="@style/CustomActionBarTheme"
+            ></activity>
+        <activity android:name="main.Verifikasi" android:label="Verifikasi"
+            android:theme="@style/CustomActionBarTheme"
+            ></activity>
+        <activity android:name="activity.MenuTabActivity" 
+            android:theme="@style/CustomActionBarTheme"
+            ></activity>
+        <activity android:name="activity.FriendsActivity" ></activity>
+        <activity android:name="activity.GroupsActivity" ></activity>
+        <activity android:name="activity.ChatsActivity" ></activity>
+
+        <activity android:name="action.Chats_Action"
+            android:label="Chat"
+            android:theme="@style/CustomActionBarTheme"
+            android:launchMode="singleInstance"
+            android:noHistory = "true"
+         
+            ></activity>
+        <!-- android:launchMode="singleTask"
+        android:clearTaskOnLaunch="true" 
+        android:launchMode="singleInstance"
+        -->
+        <activity android:name="org.achartengine.GraphicalActivity"
+             android:theme="@style/CustomActionBarTheme"/>
+        <activity android:name="action.Chats_Group_Action"
+            	android:launchMode="singleInstance" 
+            	android:noHistory = "true"	
+            ></activity>
+        <!-- android:noHistory = "true" -->
+        <receiver android:name="service.AlarmReceiver"></receiver>
+
+
+        <activity android:name="action.Friends_Invitation"
+            		android:label="Invitation"
+            		android:theme="@style/CustomActionBarTheme"
+            ></activity>
+        <activity android:name="action.Profile"
+             android:label="My Profile"
+             android:theme="@style/CustomActionBarTheme"
+            ></activity>
+        
+        <service android:name="alarm.AlarmService" 
+            android:enabled="true"/>
+        
+         <receiver android:name="alarm.AlarmManagerHelper" >
+            <intent-filter>
+                <action android:name="alarm.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+         <activity android:name="alarm.AlarmScreen"></activity>
+        
+    </application>
+    
+
+</manifest>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3091d6"
+    android:orientation="vertical" >
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="#0785b5"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp" >
+
+        <TextView
+            android:id="@+id/txtProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#468bca" >
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#0785b5"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp" >
+
+        <ImageButton
+            android:id="@+id/btn_Profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/profile64"
+            android:src="@drawable/profile64" />
+
+        <TextView
+            android:id="@+id/profil_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Nurul Akbar-6301122194"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#468bca" >
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow5"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#0785b5"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp" >
+
+        <TextView
+            android:id="@+id/txtFriends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="Friends"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_Invitation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40dp"
+            android:layout_weight="1"
+            android:background="#0785b5"
+            android:textColor="#ff0000"
+            android:textSize="15sp"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/btn_PopupAddfriends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="0"
+            android:background="#0785b5"
+            android:text="Add+"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/TableRow6"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#468bca" >
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow7"
+        android:layout_width="match_parent"
+        android:layout_height="310dp"
+        android:layout_weight="1" >
+
+        <ListView
+            android:id="@+id/list_friends"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </ListView>
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/TableRow01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#074083"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/tes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="p-talk"
+            android:textColor="#ffffff" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#074083"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/profil_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2015"
+            android:textColor="#ffffff" />
+    </TableRow>
+
+</LinearLayout><!-- From: file:/D:/aSDK/StudioProjects/Project/app/src/main/res/layout/friends.xml -->

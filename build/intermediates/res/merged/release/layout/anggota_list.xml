@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#dcdcdc" >
+
+        <TextView
+            android:id="@+id/anggota_nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/chats_time_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/anggota_nim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:text="TextView" />
+
+    </TableRow>
+
+</LinearLayout>
+<!-- From: file:/D:/aSDK/StudioProjects/Project/app/src/main/res/layout/anggota_list.xml -->

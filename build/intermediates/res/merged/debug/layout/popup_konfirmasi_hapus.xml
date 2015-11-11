@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#dcdcdc"
+        android:gravity="center"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/pesan_hapus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Anda yakin akan mengahpus data ini?"
+            android:textColor="#ff0000" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#dcdcdc"
+        android:gravity="center"
+        android:padding="10dp" >
+
+        <Button
+            android:id="@+id/konfirmasi_ya"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/btn_back200"
+            android:text="Ya" />
+
+        <Button
+            android:id="@+id/konfirmasi_tidak"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/but_backred200"
+            android:text="Tidak" />
+
+    </TableRow>
+
+</LinearLayout>
+<!-- From: file:/D:/aSDK/StudioProjects/Project/app/src/main/res/layout/popup_konfirmasi_hapus.xml -->
