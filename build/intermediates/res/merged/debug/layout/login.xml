@@ -50,7 +50,7 @@
             android:background="@drawable/back_textfield"
             android:ems="10"
             android:gravity="center"
-            android:hint="username"
+            android:hint="NIM OR NIP"
             android:textAlignment="center" >
 
             <requestFocus />
@@ -73,7 +73,7 @@
             android:background="@drawable/back_textfield"
             android:ems="10"
             android:gravity="center"
-            android:hint="password"
+            android:hint="PASSWORD"
             android:inputType="textPassword"
             android:textAlignment="center" />
 
@@ -110,7 +110,7 @@
             android:id="@+id/tes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="p-talk"
+            android:text="NURUL AKBAR"
             android:textColor="#ffffff" />
 
     </TableRow>
