@@ -83,7 +83,7 @@ public class Chats_Action extends Activity {
 
 		// array = new ArrayList<HashMap<String, String>>();
 		txtnama = (TextView) findViewById(R.id.chats_actionName);
-		txtidd = (TextView) findViewById(R.id.chats_actionNim);
+		txtidd = (TextView) findViewById(R.id.chats_actionIdd);
 		send = (ImageButton) findViewById(R.id.chats_Action_Send);
 		send_text = (EditText) findViewById(R.id.chat_action_formmessage);
 
